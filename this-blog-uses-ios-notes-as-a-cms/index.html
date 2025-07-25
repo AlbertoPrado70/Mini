@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <div class="flex">
+  <div class="chip">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20">
+      <path d="M4.75 8a.75.75 0 0 0-.75.75v2.5c0 .414.336.75.75.75h9.5a.75.75 0 0 0 .75-.75v-2.5a.75.75 0 0 0-.75-.75h-9.5Z" />
+      <path fill-rule="evenodd" d="M1 7.25A2.25 2.25 0 0 1 3.25 5h12.5A2.25 2.25 0 0 1 18 7.25v1.085a1.5 1.5 0 0 1 1 1.415v.5a1.5 1.5 0 0 1-1 1.415v1.085A2.25 2.25 0 0 1 15.75 15H3.25A2.25 2.25 0 0 1 1 12.75v-5.5Zm2.25-.75a.75.75 0 0 0-.75.75v5.5c0 .414.336.75.75.75h12.5a.75.75 0 0 0 .75-.75v-5.5a.75.75 0 0 0-.75-.75H3.25Z" clip-rule="evenodd" />
+    </svg>
+    <span>86</span>
+  </div>
+  <div class="chip">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20">
+      <path d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V12ZM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H6ZM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V12ZM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H8ZM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75V10ZM10 11.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75H10ZM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75V14ZM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75H12ZM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75V12ZM12 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H12ZM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75V10ZM14 11.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75H14Z" />
+      <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
+    </svg>
+    <span>14/07/25</span>
+  </div>
+</div>
+<h1>This blog uses iOS Notes as a CMS</h1>
+<p>I love simplicity.</p>
+<p>Simplicity allows me to focus on the important things.</p>
+<p>Like writing a new blog.</p>
+<p>What are you seeing is a blog made with eleventy that uses iOS Notes App as a
+CMS </p>
+<h2>How does it works?</h2>
+<p>I dont think that the setup is that complicated:</p>
+<ul>
+<li>A Shortcut sends all modified notes from today to a special email address</li>
+<li>A Github action triggers an Eleventy Build</li>
+<li>Eleventy uses imap-flow to create data from received emails</li>
+</ul>
+<p>This simple setup allows me to create posts from my notes.</p>
+<p>The neat part is that i can update posts by modifing published posts, as long i
+dont change my permalink.</p>
+<h2>Markdown</h2>
+<p>This setups allows me to use markdown in my notes.</p>
+<p>Another cool thing is that i can include other data to my posts, like the
+battery level at the time of posting.</p>
+<p>Yeah, i know that is not usefull, but it is kinda cool.</p>
+<h2>Translating to english</h2>
+<p>English is not my first languaje so this setup allows me to check errors before
+sending the email.</p>
+
+
+    <style>
+
+        body {
+            padding: 16px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 480px;
+            color: #4e4b42;
+            background-color: #dad4bb;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        a {
+            color: #4e4b42;
+            font-weight: 700;
+        }
+
+        .flex {
+            gap: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chip {
+            background: #4e4b42; 
+            color: #dad4bb; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            font-size: 12px; 
+            font-weight: 600;
+            padding: 4px 12px;
+        }
+
+    </style>
+
+</body>
+</html>
