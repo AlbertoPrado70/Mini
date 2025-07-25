@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      USER_EMAIL: ${{ secrets.USER_EMAIL }}
+      USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
 
     steps:
 
@@ -24,9 +27,7 @@ jobs:
 
       - name: Compilar el sitio con Eleventy
         run: npm run build
-        env:  # <--- Variables de entorno globales
-          USER_EMAIL: ${{ secrets.USER_EMAIL }}
-          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+        
 
       - name: Publicar en GitHub Pages (gh-pages)
         uses: peaceiris/actions-gh-pages@v4
