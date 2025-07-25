@@ -4,7 +4,9 @@ const { simpleParser } = require('mailparser');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
-require('dotenv').config();
+if (!process.env.CI) {
+  require('dotenv').config();
+}
 
 module.exports = async function () {
 

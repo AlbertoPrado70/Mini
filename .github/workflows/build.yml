@@ -17,6 +17,11 @@ jobs:
       - name: Clonar el repositorio
         uses: actions/checkout@v4
 
+      - name: Mostrar variables de entorno en bash
+        run: |
+          echo "USER_EMAIL: $USER_EMAIL"
+          echo "USER_PASSWORD: $USER_PASSWORD"
+
       - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
