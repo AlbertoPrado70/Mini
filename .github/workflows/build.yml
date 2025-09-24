@@ -1,42 +1,34 @@
-name: Build Eleventy Site Daily
+name: Eleventy Build & Deploy
 
 on:
-  schedule:
-    - cron: '0 3 * * *' # A las 3:00 AM UTC todos los días
-  workflow_dispatch: # Permite ejecutarlo manualmente
+  push:
+    branches:
+      - master  # se ejecuta cada vez que haya un commit en master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      USER_EMAIL: ${{ secrets.USER_EMAIL }}
-      USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Clonar el repositorio
-        uses: actions/checkout@v4
-
-      - name: Mostrar variables de entorno en bash
-        run: |
-          echo "USER_EMAIL: $USER_EMAIL"
-          echo "USER_PASSWORD: $USER_PASSWORD"
-
-      - name: Instalar Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: Instalar dependencias
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      - name: Compilar el sitio con Eleventy
-        run: npm run build
-        
+      - name: Build Eleventy site
+        run: npx eleventy
 
-      - name: Publicar en GitHub Pages (gh-pages)
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
+          commit_user_name: "Alberto Prado"
+          commit_user_email: "TU_EMAIL@github.com"
