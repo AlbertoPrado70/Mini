@@ -25,10 +25,10 @@ jobs:
         run: npx eleventy
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
           commit_user_name: "Alberto Prado"
-          commit_user_email: "TU_EMAIL@github.com"
+          commit_user_email: "danteprado.70@gmail.com"
