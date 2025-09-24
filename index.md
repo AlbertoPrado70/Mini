@@ -7,6 +7,6 @@ layout: base.liquid
 
 See all my posts
 
-{% for post in posts %}
-  <a href="{{ post.title | slugify }}">{{ post.title }}</a>
+{% for post in collections.post %}
+  <a href="{{ post.page.url }}">{{ post.data.title }}</a>
 {% endfor %}
