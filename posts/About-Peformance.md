@@ -8,19 +8,15 @@ battery: "18"
 layout: base.liquid
 tags: post
 ---
+
+# Allmost all websites have performance issues
   
 Last week I’ve been very busy working on websites for these clients:
-
-  
-
 
   * [https://mueblesalex.com](https://mueblesalex.com/)
   * [https://tiendasoseltexcoco.com](https://tiendasoseltexcoco.com/)
   * <https://contadorresico.com.mx>
   * [https://www.meneses.law/](https://www.meneses.law/es)
-
-  
-
 
 All of them reached out to me through my website ([alprado.com](https://alprado.com/)), and they all have something in common: performance issues.
 
